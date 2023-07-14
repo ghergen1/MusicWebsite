@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HYPERDAZE</title>
+    <style>
+        /* Define animation keyframes */
+        @keyframes colorAnimation {
+            0% {
+                color: #ffb6c1;
+            }
+
+            25% {
+                color: lightblue;
+            }
+
+            50% {
+                color: lightyellow;
+            }
+
+            75% {
+                color: rgb(215, 128, 255);
+            }
+
+            100% {
+                color: lightpink;
+            }
+        }
+
+        /* Apply animation to the heading */
+        h1 {
+            font-size: 12rem;
+            animation: colorAnimation 5s infinite;
+            font-weight: bold;
+            text-align: center;
+            /* margin-top: 4rem; */
+            margin: 0 auto;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        h2 {
+            animation: colorAnimation 5s infinite;
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 1px 1px 1px black;
+            margin: 0 auto;
+            /* margin-bottom: 2rem; */
+        }
+
+        /* #productionLessons {
+
+            display: inline;
+            float: left;
+        } */
+
+        /* #bookings {
+            margin-right: 10rem;
+
+            display: inline;
+            float: right;
+        } */
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container {
+            max-width: 968px;
+            margin: 0 auto;
+            /* margin-left: 12rem; */
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            /* float: left */
+        }
+
+        .form-container label,
+        .form-container input,
+        .form-container textarea,
+        .form-container input[type="submit"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: lightpink;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        iframe {
+            display: inline;
+        }
+
+        .links-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+    <h1>HYPERDAZE</h1>
+    <hr>
+
+    <h2 id="productionLessons">PRODUCTION LESSONS</h2>
+    <div class="video-container">
+        <video width="1000" autoplay loop muted id="meters">
+            <source src="media/meters.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <br>
+    <div class="form-container">
+        <form action="submit-form.php" method="POST">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="1" cols="10"></textarea>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <hr>
+
+    <h2>FEATURED MUSIC</h2>
+    <div class="links-container">
+        <iframe width="400" height="152" style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/5DKtPQu9ak6Rw5pdB61mKj?utm_source=generator" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe width="400" height="152" style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/6697t0hk5EqWB0wKUVnwlP?utm_source=generator" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe width="400" height="152" style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/5isGoVS562ByAONuaLPZ8U?utm_source=generator" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe width="400" height="152" style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/5mUIhpauXVegSQRQHBd4Qy?utm_source=generator" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe width="400" height="152" style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/15XybuVUivUnvXzcB0qo6C?utm_source=generator" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe width="400" height="152" style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/3Jz3MJekk1sNYmOSk0AAr2?utm_source=generator&theme=0"
+            allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+    </div>
+</body>
+
+</html>
